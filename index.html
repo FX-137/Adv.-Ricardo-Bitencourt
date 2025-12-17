@@ -59,18 +59,18 @@
 </head>
 <body class="bg-law-gray text-slate-800 antialiased selection:bg-law-gold selection:text-white flex flex-col min-h-screen overflow-x-hidden">
 
-    <!-- HEADER SIMPLIFICADO -->
+    <!-- HEADER SIMPLIFICADO E RESPONSIVO -->
     <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-law-blue/95 backdrop-blur-sm border-b border-white/10 shadow-lg py-3">
-        <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 flex justify-between items-center gap-2">
             <!-- Logo -->
-            <div class="flex flex-col group shrink-0 max-w-[60%]">
-                <span class="text-xl md:text-2xl font-bold text-white tracking-widest uppercase transition-colors truncate">Ricardo Bitencourt</span>
-                <span class="text-[10px] md:text-xs text-law-gold tracking-[0.3em] uppercase truncate">Advocacia & Consultoria</span>
+            <div class="flex flex-col shrink-0">
+                <span class="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wider sm:tracking-widest uppercase truncate">Ricardo Bitencourt</span>
+                <span class="text-[9px] sm:text-[10px] md:text-xs text-law-gold tracking-[0.15em] sm:tracking-[0.3em] uppercase truncate">Advocacia & Consultoria</span>
             </div>
 
             <!-- Botão de Ação (VERDE WHATSAPP) -->
-            <a href="https://wa.me/5551992496479?text=Ol%C3%A1%2C%20Dr.%20Ricardo.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="bg-whatsapp-green text-white px-5 py-2 rounded-sm text-xs md:text-sm uppercase font-bold tracking-wide hover:bg-whatsapp-dark transition-all duration-300 shadow-md whitespace-nowrap flex items-center gap-2 border border-transparent hover:border-white/20">
-                <i data-lucide="message-circle" width="16" height="16"></i>
+            <a href="https://wa.me/5551992496479?text=Ol%C3%A1%2C%20Dr.%20Ricardo.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="bg-whatsapp-green text-white px-3 sm:px-5 py-1.5 sm:py-2 rounded-sm text-[10px] sm:text-xs md:text-sm uppercase font-bold tracking-wide hover:bg-whatsapp-dark transition-all duration-300 shadow-md whitespace-nowrap flex items-center gap-1.5 sm:gap-2 border border-transparent hover:border-white/20">
+                <i data-lucide="message-circle" width="14" height="14" class="sm:w-4 sm:h-4"></i>
                 <span>Agendar<span class="hidden sm:inline"> Consulta</span></span>
             </a>
         </div>
@@ -87,7 +87,6 @@
                 <p class="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto">
                     Compromisso ético e atuação combativa para garantir justiça em causas complexas.
                 </p>
-                <!-- BOTÃO REMOVIDO PARA EVITAR REDUNDÂNCIA COM O HEADER -->
             </div>
         </section>
 
@@ -97,7 +96,8 @@
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="w-full md:w-1/2 relative">
                         <div class="absolute -top-4 -left-4 w-full h-full border-2 border-law-gold z-0 hidden md:block"></div>
-                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ricardo Bitencourt" class="relative z-10 shadow-xl w-full h-auto grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-700 object-cover rounded-sm">
+                        <!-- Imagem agora permanentemente colorida e sem classes de hover complexas -->
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ricardo Bitencourt" class="relative z-10 shadow-xl w-full h-auto transition-transform duration-500 hover:scale-[1.01] object-cover rounded-sm">
                     </div>
                     
                     <div class="w-full md:w-1/2">
@@ -204,13 +204,11 @@
         <section class="py-20 bg-stone-900 text-white">
             <div class="container mx-auto px-4">
                 <div class="mb-10 w-full max-w-4xl mx-auto flex flex-col md:flex-row justify-center gap-8 text-center">
-                    <!-- Cards Transformados em Links -->
                     <a href="tel:+555133727235" class="bg-stone-800 p-6 rounded-lg border border-stone-700 w-full hover:border-law-gold transition-colors block hover:bg-stone-700/50 group">
                         <i data-lucide="phone" class="mx-auto text-law-gold mb-2 group-hover:scale-110 transition-transform"></i>
                         <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-2">Telefone</h3>
                         <p class="text-xl font-bold group-hover:text-white transition-colors break-words">(51) 3372-7235</p>
                     </a>
-                    <!-- Apenas href mailto sem target blank para evitar tela branca -->
                     <a href="mailto:contato@bitencourt.adv.br" class="bg-stone-800 p-6 rounded-lg border border-stone-700 w-full hover:border-law-gold transition-colors block hover:bg-stone-700/50 group">
                         <i data-lucide="mail" class="mx-auto text-law-gold mb-2 group-hover:scale-110 transition-transform"></i>
                         <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-2">Email</h3>
@@ -239,7 +237,6 @@
                              </iframe>
                         </div>
                         
-                        <!-- BOTÃO COMO CHEGAR CORRIGIDO -->
                         <div class="flex flex-col items-center gap-6 mt-2">
                             <a href="https://maps.app.goo.gl/Bukf7foyGgraTWnU9" target="_blank" rel="noopener noreferrer"
                                class="inline-flex items-center justify-center gap-2 bg-law-gold hover:bg-white hover:text-law-blue text-white font-bold py-3 px-6 md:px-10 rounded-full shadow-lg transition-all hover:scale-105 uppercase tracking-wider border border-white/10 group text-center whitespace-normal max-w-full">

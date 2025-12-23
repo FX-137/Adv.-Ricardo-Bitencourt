@@ -6,22 +6,17 @@
     <title>Ricardo Bitencourt | Advocacia e Consultoria Jurídica</title>
     <meta name="description" content="Escritório de advocacia Ricardo Bitencourt. Especialista em Direito Civil, Trabalhista e Família.">
     
-    <!-- Configurações de PWA e Cor do Sistema -->
+    <!-- Configurações de PWA -->
     <meta name="theme-color" content="#0f172a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="manifest.json">
 
-    <!-- Favicon para Navegadores (PC e Mobile) - Versão PNG Centralizada -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqgNg6tmdfMGjKvZwZ9_OAHgbsAFhZU-Xvn0xVBVWn8vjfSLL8yKrA719T52D34a7PTDF9NkBPAeEvgjVMIl-kzvovEEnXzHm53h58IWlBKBEAEgYOxTwlFFSIGF5rqWXKyCxUL6inpjliN0r4VZJAlqDAMbpi07KKFty79vcBPvzjtRcaFNOH6O0rmNM/s64/Balan%C3%A7a.png">
-    
-    <!-- Favicon para Dispositivos Apple (iPhone/iPad) -->
     <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqgNg6tmdfMGjKvZwZ9_OAHgbsAFhZU-Xvn0xVBVWn8vjfSLL8yKrA719T52D34a7PTDF9NkBPAeEvgjVMIl-kzvovEEnXzHm53h58IWlBKBEAEgYOxTwlFFSIGF5rqWXKyCxUL6inpjliN0r4VZJAlqDAMbpi07KKFty79vcBPvzjtRcaFNOH6O0rmNM/s1600/Balan%C3%A7a.png">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Configurações do Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -30,28 +25,20 @@
                         'law-blue': '#0f172a',
                         'law-gold': '#b49b67',
                         'law-gray': '#f8fafc',
-                        'law-accent': '#1e293b',
                         'whatsapp-green': '#25D366',
                         'whatsapp-dark': '#128C7E',
-                        'agapio-red': '#e31d1a',
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
                         sans: ['"Lato"', 'sans-serif'],
                     },
                     animation: {
-                        'fade-in-up': 'fadeInUp 0.5s ease-out',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
                     },
                     keyframes: {
                         fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(100%)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
                         }
                     }
                 }
@@ -59,7 +46,6 @@
         }
     </script>
 
-    <!-- Fontes e Ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -76,16 +62,13 @@
 </head>
 <body class="bg-law-gray text-slate-800 antialiased selection:bg-law-gold selection:text-white flex flex-col min-h-screen overflow-x-hidden">
 
-    <!-- HEADER SIMPLIFICADO E RESPONSIVO -->
+    <!-- HEADER -->
     <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-law-blue/95 backdrop-blur-sm border-b border-white/10 shadow-lg py-3">
         <div class="container mx-auto px-4 flex justify-between items-center gap-2">
-            <!-- Logo -->
             <div class="flex flex-col shrink-0">
                 <span class="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-wider sm:tracking-widest uppercase truncate">Ricardo Bitencourt</span>
                 <span class="text-[9px] sm:text-[10px] md:text-xs text-law-gold tracking-[0.15em] sm:tracking-[0.3em] uppercase truncate">Advocacia & Consultoria</span>
             </div>
-
-            <!-- Botão de Ação (VERDE WHATSAPP) -->
             <a href="https://wa.me/5551992496479?text=Ol%C3%A1%2C%20Dr.%20Ricardo.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="bg-whatsapp-green text-white px-3 sm:px-5 py-1.5 sm:py-2 rounded-sm text-[10px] sm:text-xs md:text-sm uppercase font-bold tracking-wide hover:bg-whatsapp-dark transition-all duration-300 shadow-md whitespace-nowrap flex items-center gap-1.5 sm:gap-2 border border-transparent hover:border-white/20">
                 <i data-lucide="message-circle" width="14" height="14" class="sm:w-4 sm:h-4"></i>
                 <span>Agendar<span class="hidden sm:inline"> Consulta</span></span>
@@ -93,171 +76,130 @@
         </div>
     </header>
 
-    <main class="flex-grow">
-        <!-- HERO SECTION -->
-        <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4 pt-20">
+    <main class="flex-grow pt-16">
+        <!-- HERO -->
+        <section id="home" class="hero-bg h-[90vh] flex items-center justify-center text-center px-4">
             <div class="max-w-4xl animate-fade-in-up w-full">
                 <div class="w-20 h-1 bg-law-gold mx-auto mb-6"></div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-6 leading-tight drop-shadow-lg break-words">
-                    Experiência e Excelência <br class="hidden md:block"> na Defesa dos Seus Direitos
-                </h1>
-                <p class="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto">
-                    Compromisso ético e atuação combativa para garantir justiça em causas complexas.
-                </p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-6 leading-tight drop-shadow-lg">Justiça e Compromisso <br> com o seu Direito</h1>
+                <p class="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto">Atuação estratégica em causas complexas, pautada pela ética e excelência jurídica.</p>
             </div>
         </section>
 
         <!-- SOBRE -->
-        <section class="py-20 bg-white">
+        <section id="sobre" class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="w-full md:w-1/2 relative">
-                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-law-gold z-0 hidden md:block"></div>
-                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ricardo Bitencourt" class="relative z-10 shadow-xl w-full h-auto transition-transform duration-500 hover:scale-[1.01] object-cover rounded-sm">
+                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-law-gold z-0 hidden md:block rounded-sm"></div>
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ricardo Bitencourt" class="relative z-10 shadow-2xl w-full h-auto object-cover rounded-sm">
                     </div>
-                    
                     <div class="w-full md:w-1/2">
                         <h4 class="text-law-gold text-sm font-bold uppercase tracking-widest mb-2">Sobre o Advogado</h4>
                         <h2 class="text-3xl md:text-4xl font-bold text-law-blue mb-6">Ricardo Bitencourt</h2>
-                        <p class="text-gray-600 mb-6 leading-relaxed text-justify">
-                            Com sólida formação acadêmica e anos de experiência prática nos tribunais, Ricardo Bitencourt fundou seu escritório com o propósito de oferecer uma advocacia artesanal, estratégica e próxima ao cliente. 
-                        </p>
-                        <p class="text-gray-600 mb-8 leading-relaxed text-justify">
-                            Pautado pela ética e pela transparência, o escritório busca não apenas resolver conflitos, mas antecipar problemas e garantir a segurança jurídica necessária para pessoas físicas e empresas.
-                        </p>
-                        
-                        <div class="grid grid-cols-2 gap-4 border-t border-gray-200 pt-6">
-                            <div>
-                                <strong class="block text-3xl text-law-gold font-serif">15+</strong>
-                                <span class="text-xs uppercase text-gray-500 tracking-wider">Anos de Experiência</span>
-                            </div>
-                            <div>
-                                <strong class="block text-3xl text-law-gold font-serif">500+</strong>
-                                <span class="text-xs uppercase text-gray-500 tracking-wider">Casos Resolvidos</span>
-                            </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed text-justify">Com sólida formação e anos de experiência nos tribunais, Ricardo Bitencourt fundou seu escritório com o propósito de oferecer uma advocacia artesanal e estratégica.</p>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-justify">Buscamos não apenas resolver conflitos, mas garantir a segurança jurídica necessária para nossos clientes em todas as esferas do direito.</p>
+                        <div class="grid grid-cols-2 gap-4 border-t pt-6">
+                            <div><strong class="block text-3xl text-law-gold font-serif">15+</strong><span class="text-xs uppercase text-gray-500 tracking-wider">Anos de Experiência</span></div>
+                            <div><strong class="block text-3xl text-law-gold font-serif">500+</strong><span class="text-xs uppercase text-gray-500 tracking-wider">Casos de Sucesso</span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ÁREAS DE ATUAÇÃO -->
-        <section class="py-20 bg-law-gray">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16 max-w-2xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-law-blue mb-4">Áreas de Atuação</h2>
-                    <div class="w-16 h-1 bg-law-gold mx-auto mb-4"></div>
-                    <p class="text-gray-600">Soluções jurídicas integradas com foco em resultados.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Cards -->
-                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-law-gold group">
-                        <div class="text-law-gold mb-4 group-hover:scale-110 transition-transform"><i data-lucide="scale" width="40" height="40"></i></div>
-                        <h3 class="text-xl font-bold text-law-blue mb-3">Direito Civil</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Atuação em contratos, responsabilidade civil, indenizações, posse e propriedade.</p>
+        <!-- ATUAÇÃO -->
+        <section id="atuacao" class="py-20 bg-law-gray">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-law-blue mb-4">Áreas de Atuação</h2>
+                <div class="w-16 h-1 bg-law-gold mx-auto mb-12"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-law-gold group">
+                        <div class="text-law-gold mb-4"><i data-lucide="scale" width="40" height="40"></i></div>
+                        <h3 class="text-xl font-bold text-law-blue mb-2">Direito Civil</h3>
+                        <p class="text-gray-500 text-sm">Contratos, indenizações e responsabilidade civil em geral.</p>
                     </div>
-
-                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-law-gold group">
-                        <div class="text-law-gold mb-4 group-hover:scale-110 transition-transform"><i data-lucide="users" width="40" height="40"></i></div>
-                        <h3 class="text-xl font-bold text-law-blue mb-3">Direito de Família</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Divórcios, pensão alimentícia, guarda de menores, inventários e partilhas.</p>
+                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-law-gold group">
+                        <div class="text-law-gold mb-4"><i data-lucide="users" width="40" height="40"></i></div>
+                        <h3 class="text-xl font-bold text-law-blue mb-2">Direito de Família</h3>
+                        <p class="text-gray-500 text-sm">Divórcios, inventários, partilha de bens e pensão alimentícia.</p>
                     </div>
-
-                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-law-gold group">
-                        <div class="text-law-gold mb-4 group-hover:scale-110 transition-transform"><i data-lucide="briefcase" width="40" height="40"></i></div>
-                        <h3 class="text-xl font-bold text-law-blue mb-3">Direito Trabalhista</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Defesa dos direitos de empregados e empregadores, rescisões e compliance.</p>
-                    </div>
-
-                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-law-gold group">
-                        <div class="text-law-gold mb-4 group-hover:scale-110 transition-transform"><i data-lucide="shield-check" width="40" height="40"></i></div>
-                        <h3 class="text-xl font-bold text-law-blue mb-3">Direito do Consumidor</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Ações contra práticas abusivas, negativação indevida e problemas com planos de saúde.</p>
-                    </div>
-
-                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-law-gold group">
-                        <div class="text-law-gold mb-4 group-hover:scale-110 transition-transform"><i data-lucide="landmark" width="40" height="40"></i></div>
-                        <h3 class="text-xl font-bold text-law-blue mb-3">Direito Previdenciário</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Planejamento previdenciário, aposentadorias e revisões de benefícios.</p>
-                    </div>
-
-                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-law-gold group">
-                        <div class="text-law-gold mb-4 group-hover:scale-110 transition-transform"><i data-lucide="file-text" width="40" height="40"></i></div>
-                        <h3 class="text-xl font-bold text-law-blue mb-3">Consultoria Jurídica</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Assessoria preventiva para evitar litígios e elaboração de pareceres técnicos.</p>
+                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-law-gold group">
+                        <div class="text-law-gold mb-4"><i data-lucide="briefcase" width="40" height="40"></i></div>
+                        <h3 class="text-xl font-bold text-law-blue mb-2">Direito Trabalhista</h3>
+                        <p class="text-gray-500 text-sm">Defesa dos direitos do trabalhador e consultoria preventiva.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- DEPOIMENTOS -->
-        <section class="py-20 bg-law-blue text-white relative overflow-hidden">
-             <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <section class="py-20 bg-law-blue text-white overflow-hidden relative">
             <div class="container mx-auto px-4 relative z-10">
                 <h2 class="text-3xl font-bold text-center mb-12">O que dizem nossos clientes</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white/5 p-8 rounded-lg border border-white/10 hover:bg-white/10 transition">
-                        <div class="flex text-law-gold mb-4"><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i></div>
-                        <p class="italic text-gray-300 text-sm mb-6">"Profissional extremamente competente. O Dr. Ricardo conduziu meu processo de divórcio com muita humanidade e eficiência."</p>
-                        <h5 class="font-bold text-white font-serif">Ana Paula M.</h5>
+                    <div class="bg-white/5 p-8 rounded-lg border border-white/10 text-center md:text-left">
+                        <p class="italic text-gray-300 text-sm mb-6">"Profissional exemplar. Conduziu meu caso com extrema clareza e dedicação. Consegui o resultado que esperava."</p>
+                        <h5 class="font-bold text-law-gold font-serif">Ana Maria S.</h5>
                     </div>
-                    <div class="bg-white/5 p-8 rounded-lg border border-white/10 hover:bg-white/10 transition">
-                        <div class="flex text-law-gold mb-4"><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i></div>
-                        <p class="italic text-gray-300 text-sm mb-6">"Excelente atendimento. Conseguiu resolver uma causa trabalhista que já se arrastava há anos. Muita clareza nas explicações."</p>
-                        <h5 class="font-bold text-white font-serif">Carlos Eduardo S.</h5>
+                    <div class="bg-white/5 p-8 rounded-lg border border-white/10 text-center md:text-left">
+                        <p class="italic text-gray-300 text-sm mb-6">"Excelente atendimento e resultado rápido. Recomendo o Dr. Ricardo para quem busca seriedade."</p>
+                        <h5 class="font-bold text-law-gold font-serif">Marcos P.</h5>
                     </div>
-                    <div class="bg-white/5 p-8 rounded-lg border border-white/10 hover:bg-white/10 transition">
-                        <div class="flex text-law-gold mb-4"><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i></div>
-                        <p class="italic text-gray-300 text-sm mb-6">"O Dr. Ricardo demonstra profundo conhecimento jurídico. Me senti segura durante todo o processo. Resultado além do esperado."</p>
-                        <h5 class="font-bold text-white font-serif">Fernanda L.</h5>
+                    <div class="bg-white/5 p-8 rounded-lg border border-white/10 text-center md:text-left">
+                        <p class="italic text-gray-300 text-sm mb-6">"Conhecimento técnico impecável. Me senti segura durante todo o processo jurídico. Nota 10!"</p>
+                        <h5 class="font-bold text-law-gold font-serif">Lúcia F.</h5>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- LOCALIZAÇÃO & CONTATO -->
+        <!-- LOCALIZAÇÃO & CONTATO (PADRÃO FCL - 100% PADRONIZADO) -->
         <section class="py-20 bg-stone-900 text-white">
             <div class="container mx-auto px-4">
-                <div class="mb-10 w-full max-w-4xl mx-auto flex flex-col md:flex-row justify-center gap-8 text-center">
-                    <a href="tel:+555133727235" class="bg-stone-800 p-6 rounded-lg border border-stone-700 w-full hover:border-law-gold transition-colors block hover:bg-stone-700/50 group">
-                        <i data-lucide="phone" class="mx-auto text-law-gold mb-2 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-2">Telefone</h3>
-                        <p class="text-xl font-bold group-hover:text-white transition-colors break-words">(51) 3372-7235</p>
+                <div class="mb-12 w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="tel:+555133727235" class="bg-stone-800 p-6 rounded-lg border border-stone-700 hover:border-law-gold transition-all block hover:bg-stone-700/50 group text-center">
+                        <i data-lucide="phone" class="mx-auto text-law-gold mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-1 text-center">Telefone</h3>
+                        <p class="text-xl font-bold">(51) 3372-7235</p>
                     </a>
-                    <a href="mailto:contato@bitencourt.adv.br" class="bg-stone-800 p-6 rounded-lg border border-stone-700 w-full hover:border-law-gold transition-colors block hover:bg-stone-700/50 group">
-                        <i data-lucide="mail" class="mx-auto text-law-gold mb-2 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-2">Email</h3>
-                        <p class="text-xl font-bold group-hover:text-white transition-colors break-all">contato@bitencourt.adv.br</p>
+                    <a href="mailto:contato@bitencourt.adv.br" class="bg-stone-800 p-6 rounded-lg border border-stone-700 hover:border-law-gold transition-all block hover:bg-stone-700/50 group text-center">
+                        <i data-lucide="mail" class="mx-auto text-law-gold mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-1 text-center">Email</h3>
+                        <p class="text-xl font-bold break-all">contato@bitencourt.adv.br</p>
                     </a>
                 </div>
 
-                <div class="max-w-4xl mx-auto bg-stone-800 rounded-xl overflow-hidden shadow-2xl border border-stone-700 relative">
-                    <div class="bg-law-blue py-4 text-center border-b border-white/5 shadow-md relative z-10">
-                        <h2 class="text-xl md:text-2xl font-serif font-bold text-law-gold uppercase tracking-widest drop-shadow-sm flex items-center justify-center gap-3">
-                            <i data-lucide="map-pin" class="text-law-gold shrink-0" width="24"></i>
-                            Nosso Escritório
+                <!-- Card de Localização FCL Premium (Dimensões: max-w-4xl, p-10) -->
+                <div class="max-w-4xl mx-auto bg-stone-800 rounded-2xl overflow-hidden shadow-2xl border border-stone-700">
+                    <div class="bg-law-blue py-5 text-center border-b border-white/5 shadow-md">
+                        <h2 class="text-xl md:text-2xl font-serif font-bold text-law-gold uppercase tracking-widest flex items-center justify-center gap-3">
+                            <i data-lucide="map-pin" class="text-law-gold shrink-0"></i>
+                            Onde Estamos
                         </h2>
                     </div>
-                    <div class="p-4 md:px-8 md:pt-8 md:pb-6 flex flex-col gap-8 bg-stone-800">
+                    <div class="p-6 md:p-10 flex flex-col gap-8">
                         <div class="text-center space-y-2">
                             <p class="text-stone-400 text-sm md:text-base font-light italic">"Localização privilegiada no centro de Porto Alegre"</p>
-                            <p class="text-stone-100 font-bold text-lg md:text-xl">Rua Senhor dos Passos, 372 - Sala 701</p>
-                            <p class="text-stone-300 text-sm">Centro Histórico - Porto Alegre/RS</p>
+                            <p class="text-stone-100 font-bold text-lg md:text-2xl leading-tight">Rua Senhor dos Passos, 372 - Sala 701</p>
+                            <p class="text-stone-400 text-sm uppercase tracking-wider">Centro Histórico - Porto Alegre/RS</p>
                         </div>
-                        <div class="w-full h-64 md:h-80 bg-stone-700 rounded-lg overflow-hidden border-4 border-stone-600 shadow-inner">
+                        
+                        <!-- Mapa Colorido (Altura: h-64 a h-96) -->
+                        <div class="w-full h-64 md:h-96 bg-stone-700 rounded-xl overflow-hidden border border-stone-600 shadow-inner">
                              <iframe 
                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.089856557876!2d-51.22359292446731!3d-30.033926874938837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197906353d7e35%3A0xe9c8e8d8f99e8293!2sR.%20Sr.%20dos%20Passos%2C%20372%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090020-180!5e0!3m2!1spt-BR!2sbr!4v1709230000000!5m2!1spt-BR!2sbr"
                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-                               title="Mapa do Escritório" class="w-full h-full grayscale-[50%] hover:grayscale-0 transition-all duration-500">
+                               title="Localização Ricardo Bitencourt" class="w-full h-full">
                              </iframe>
                         </div>
                         
-                        <div class="flex flex-col items-center gap-6 mt-2">
+                        <!-- Botão Arredondado centralizado -->
+                        <div class="flex justify-center">
                             <a href="https://maps.app.goo.gl/Bukf7foyGgraTWnU9" target="_blank" rel="noopener noreferrer"
-                               class="inline-flex items-center justify-center gap-2 bg-law-gold hover:bg-white hover:text-law-blue text-white font-bold py-3 px-6 md:px-10 rounded-full shadow-lg transition-all hover:scale-105 uppercase tracking-wider border border-white/10 group text-center whitespace-normal max-w-full">
-                                <i data-lucide="navigation" class="group-hover:animate-bounce shrink-0" width="20"></i>
-                                <span>Traçar Rota (Como Chegar)</span>
+                               class="inline-flex items-center gap-3 bg-law-gold hover:bg-white hover:text-law-blue text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all hover:scale-105 uppercase tracking-widest text-sm group">
+                                <i data-lucide="navigation" class="group-hover:animate-bounce"></i>
+                                Traçar Rota / Como Chegar
                             </a>
                         </div>
                     </div>
@@ -266,153 +208,107 @@
         </section>
     </main>
 
-    <!-- LEGAL SUB-FOOTER -->
-    <div class="bg-stone-950 border-t border-stone-900 py-6 text-xs text-stone-500">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-center md:text-left">
-            <div>
-                &copy; <span id="year"></span> Ricardo Bitencourt Advocacia. OAB/RS 00.000.
+    <!-- LEGAL BAR FCL (Sub-Footer - Altura py-8) -->
+    <div class="bg-stone-950 border-t border-stone-900 py-8 text-[11px] md:text-xs text-stone-500">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left leading-relaxed">
+                &copy; <span id="year"></span> Ricardo Bitencourt Advocacia. <br class="md:hidden"> OAB/RS 00.000. Todos os direitos reservados.
             </div>
-            <div class="flex flex-wrap justify-center gap-6 font-bold uppercase tracking-widest">
+            <div class="flex gap-6 font-bold uppercase tracking-widest">
                  <button onclick="toggleModal('modal-terms')" class="hover:text-law-gold transition-colors">Termos de Uso</button>
-                 <span class="text-stone-700 hidden md:inline">|</span>
-                 <button onclick="toggleModal('modal-privacy')" class="hover:text-law-gold transition-colors">Política de Privacidade</button>
+                 <span class="text-stone-800">|</span>
+                 <button onclick="toggleModal('modal-privacy')" class="hover:text-law-gold transition-colors">Privacidade</button>
             </div>
         </div>
     </div>
 
-    <!-- DEV FOOTER -->
-    <footer class="bg-black text-white py-3 border-t border-stone-800">
-        <div class="container mx-auto px-4 flex flex-wrap items-center justify-center gap-2">
-            <div class="text-stone-400 font-bold text-[9px] uppercase tracking-wide text-center">
-                Criado por <span class="text-law-gold">FCL</span>
-            </div>
-            <a href="https://wa.me/5551992496479?text=Ol%C3%A1%20Fernando.%20Gostaria%20de%20saber%20mais%20sobre%20cria%C3%A7%C3%A3o%20de%20sites." 
+    <!-- CREDITS BAR FCL (Rodapé Final - Altura py-4, Fundo #000) -->
+    <footer class="bg-black text-white py-4 border-t border-stone-800/50">
+        <div class="container mx-auto px-4 flex items-center justify-center gap-3">
+            <span class="text-stone-500 font-bold text-[10px] uppercase tracking-widest">Criado por <span class="text-stone-300">FCL</span></span>
+            <div class="w-px h-3 bg-stone-800"></div>
+            <a href="https://wa.me/5551992496479?text=Ol%C3%A1%20Fernando.%20Gostaria%20de%20saber%20mais%20sobre%20a%20cria%C3%A7%C3%A3o%20de%20sites." 
                target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-1 transition-all duration-300 hover:scale-110 group">
+               class="flex items-center gap-1.5 group transition-all">
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDjkkz_vlntJDY40iwAVZC60A5F5b6IwN5GpInCRMUiOo-kZ6ANNWSX1GG6sN7bYDKQmiD7P6n2fWaMBMlnSOOYLd3vItbVV4MJYff8ly1_P9mhagS_vdRYHBh5mrwYQdOrn0Yb5866Dz3uzghrVw3dOuk00FdKJHjBXVUaNLQoW7hJmy79HNkh6DVqmc/s1600/whatsapp1.png" 
                      alt="WhatsApp" width="16" height="16" class="w-4 h-4">
-                <span class="text-[9px] font-bold text-stone-400 group-hover:text-[#25D366] uppercase tracking-wide">Contato</span>
+                <span class="text-[10px] font-bold text-stone-500 group-hover:text-whatsapp-green uppercase tracking-widest">Contato</span>
             </a>
         </div>
     </footer>
 
-    <!-- AVISO DE COOKIES (ESTILO INSTITUCIONAL NOBRE) -->
+    <!-- COOKIE NOTICE FCL -->
     <div id="cookie-notice" class="fixed bottom-0 left-0 right-0 z-[100] p-4 translate-y-full opacity-0 pointer-events-none transition-all duration-700 ease-in-out">
         <div class="container mx-auto max-w-4xl">
-            <div class="bg-law-blue/95 backdrop-blur-md border border-law-gold/30 shadow-[0_10px_40px_rgba(0,0,0,0.5)] rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="bg-law-blue/95 backdrop-blur-md border border-law-gold/30 shadow-2xl rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-4">
-                    <div class="bg-law-gold/10 p-3 rounded-full shrink-0">
-                        <i data-lucide="cookie" class="text-law-gold w-6 h-6"></i>
-                    </div>
+                    <div class="bg-law-gold/10 p-3 rounded-full shrink-0"><i data-lucide="cookie" class="text-law-gold w-6 h-6"></i></div>
                     <div class="text-left">
-                        <p class="text-law-gold font-bold text-sm md:text-base mb-1 uppercase tracking-[0.15em] font-sans">Privacidade & Cookies</p>
-                        <p class="text-gray-300 text-xs md:text-sm leading-relaxed font-sans">
-                            Utilizamos cookies para personalizar sua experiência e garantir a segurança jurídica da navegação. Ao continuar, você concorda com nossos termos.
-                        </p>
+                        <p class="text-law-gold font-bold text-sm uppercase tracking-wider">Privacidade & Cookies</p>
+                        <p class="text-gray-300 text-xs leading-relaxed">Utilizamos cookies para personalizar sua experiência. Ao continuar, você concorda com nossos termos.</p>
                     </div>
                 </div>
-                <div class="flex gap-4 w-full md:w-auto">
-                    <button id="decline-cookies" class="w-full md:w-auto bg-transparent border border-law-gold/50 text-law-gold hover:bg-law-gold/10 font-bold py-2.5 px-8 rounded-xl shadow-md transition-all uppercase text-xs tracking-widest whitespace-nowrap">
-                        Recusar
-                    </button>
-                    <button id="accept-cookies" class="w-full md:w-auto bg-law-gold hover:bg-white hover:text-law-blue text-white font-bold py-2.5 px-8 rounded-xl shadow-md transition-all uppercase text-xs tracking-widest whitespace-nowrap border border-transparent">
-                        Aceitar
-                    </button>
+                <div class="flex gap-3 w-full md:w-auto">
+                    <button id="decline-cookies" class="flex-1 md:flex-none border border-law-gold/40 text-law-gold hover:bg-law-gold/10 font-bold py-2.5 px-6 rounded-xl text-[10px] uppercase tracking-widest transition-all">Recusar</button>
+                    <button id="accept-cookies" class="flex-1 md:flex-none bg-law-gold hover:bg-white hover:text-law-blue text-white font-bold py-2.5 px-6 rounded-xl text-[10px] uppercase tracking-widest transition-all">Aceitar</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- MODAIS -->
+    <!-- MODAIS PADRÃO FCL -->
     <div id="modal-terms" class="fixed inset-0 z-[101] flex items-center justify-center p-4 hidden">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="toggleModal('modal-terms')"></div>
-        <div class="relative bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-[80vh] flex flex-col animate-fade-in-up">
-            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-stone-50 rounded-t-lg">
-                <h2 class="text-2xl font-bold text-law-blue">Termos de Uso</h2>
-                <button onclick="toggleModal('modal-terms')" class="text-gray-500 hover:text-red-500 transition-colors p-1"><i data-lucide="x" width="24"></i></button>
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleModal('modal-terms')"></div>
+        <div class="relative bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[80vh] flex flex-col animate-fade-in-up">
+            <div class="p-6 border-b flex justify-between items-center bg-stone-50 rounded-t-xl">
+                <h2 class="text-xl font-bold text-law-blue font-serif">Termos de Uso</h2>
+                <button onclick="toggleModal('modal-terms')" class="text-gray-400 hover:text-red-500 transition-colors"><i data-lucide="x"></i></button>
             </div>
-            <div class="p-6 overflow-y-auto whitespace-pre-line text-gray-700 leading-relaxed font-sans">
-                Este site tem caráter meramente informativo. O conteúdo não constitui consulta jurídica formal.
+            <div class="p-8 overflow-y-auto text-sm text-gray-600 leading-relaxed font-sans">
+                Este site tem caráter meramente informativo e não constitui consulta jurídica formal. Ao navegar por este portal, você concorda que o conteúdo aqui exposto visa aproximar o escritório de seus clientes e parceiros, seguindo rigorosamente o código de ética da OAB.
             </div>
         </div>
     </div>
 
     <div id="modal-privacy" class="fixed inset-0 z-[101] flex items-center justify-center p-4 hidden">
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="toggleModal('modal-privacy')"></div>
-        <div class="relative bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-[80vh] flex flex-col animate-fade-in-up">
-            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-stone-50 rounded-t-lg">
-                <h2 class="text-2xl font-bold text-law-blue">Política de Privacidade</h2>
-                <button onclick="toggleModal('modal-privacy')" class="text-gray-500 hover:text-red-500 transition-colors p-1"><i data-lucide="x" width="24"></i></button>
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleModal('modal-privacy')"></div>
+        <div class="relative bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[80vh] flex flex-col animate-fade-in-up">
+            <div class="p-6 border-b flex justify-between items-center bg-stone-50 rounded-t-xl">
+                <h2 class="text-xl font-bold text-law-blue font-serif">Política de Privacidade</h2>
+                <button onclick="toggleModal('modal-privacy')" class="text-gray-400 hover:text-red-500 transition-colors"><i data-lucide="x"></i></button>
             </div>
-            <div class="p-6 overflow-y-auto whitespace-pre-line text-gray-700 leading-relaxed font-sans">
-                Prezamos pelo sigilo e confidencialidade. Dados enviados não são compartilhados.
-                Este site utiliza cookies de sessão e análise para melhorar a navegação do usuário.
+            <div class="p-8 overflow-y-auto text-sm text-gray-600 leading-relaxed font-sans">
+                Protegemos sua privacidade em conformidade com a LGPD. Coletamos apenas os dados necessários para agendamento de consultas quando solicitados voluntariamente pelo usuário via canais de atendimento oficiais (WhatsApp e E-mail). Não compartilhamos suas informações com terceiros.
             </div>
         </div>
     </div>
 
     <script>
-        // Ícones
         lucide.createIcons();
-        
-        // Ano
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Registro do Service Worker (Para habilitar Instalação como APP)
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./sw.js')
-              .then(reg => console.log('Service Worker registrado!', reg))
-              .catch(err => console.log('Erro ao registrar SW:', err));
-          });
+        function toggleModal(id) {
+            const m = document.getElementById(id);
+            m.classList.toggle('hidden');
+            document.body.style.overflow = m.classList.contains('hidden') ? '' : 'hidden';
         }
 
-        // Modais
-        function toggleModal(modalId) {
-            const modal = document.getElementById(modalId);
-            const body = document.body;
-            if (modal.classList.contains('hidden')) {
-                modal.classList.remove('hidden');
-                body.style.overflow = 'hidden';
-            } else {
-                modal.classList.add('hidden');
-                body.style.overflow = '';
+        document.addEventListener('DOMContentLoaded', () => {
+            const notice = document.getElementById('cookie-notice');
+            if (!localStorage.getItem('fcl-cookies')) {
+                setTimeout(() => notice.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none'), 2000);
             }
-        }
-
-        // Scroll
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 50) {
-                header.classList.remove('py-3');
-                header.classList.add('py-2', 'shadow-xl');
-            } else {
-                header.classList.add('py-3');
-                header.classList.remove('py-2', 'shadow-xl');
-            }
+            const close = (p) => {
+                localStorage.setItem('fcl-cookies', p);
+                notice.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+            };
+            document.getElementById('accept-cookies').onclick = () => close('ok');
+            document.getElementById('decline-cookies').onclick = () => close('no');
         });
 
-        // Lógica de Cookies
-        document.addEventListener('DOMContentLoaded', () => {
-            const cookieNotice = document.getElementById('cookie-notice');
-            const acceptBtn = document.getElementById('accept-cookies');
-            const declineBtn = document.getElementById('decline-cookies');
-
-            // Verifica se já interagiu com o aviso
-            if (!localStorage.getItem('cookies-interaction')) {
-                // Pequeno delay para aparecer após o carregamento inicial
-                setTimeout(() => {
-                    cookieNotice.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
-                }, 1500);
-            }
-
-            const closeNotice = (pref) => {
-                localStorage.setItem('cookies-interaction', pref);
-                cookieNotice.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
-            }
-
-            acceptBtn.addEventListener('click', () => closeNotice('accepted'));
-            declineBtn.addEventListener('click', () => closeNotice('declined'));
+        window.addEventListener('scroll', () => {
+            const h = document.getElementById('main-header');
+            window.scrollY > 50 ? h.classList.add('py-2', 'shadow-xl') : h.classList.remove('py-2', 'shadow-xl');
         });
     </script>
 </body>

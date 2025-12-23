@@ -58,6 +58,8 @@
             background-position: center;
             background-attachment: fixed;
         }
+        .faq-accordion[open] summary i { transform: rotate(180deg); }
+        summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-law-gray text-slate-800 antialiased selection:bg-law-gold selection:text-white flex flex-col min-h-screen overflow-x-hidden">
@@ -78,115 +80,222 @@
 
     <main class="flex-grow pt-16">
         <!-- HERO -->
-        <section id="home" class="hero-bg h-[90vh] flex items-center justify-center text-center px-4">
+        <section id="home" class="hero-bg h-[85vh] flex items-center justify-center text-center px-4">
             <div class="max-w-4xl animate-fade-in-up w-full">
                 <div class="w-20 h-1 bg-law-gold mx-auto mb-6"></div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-6 leading-tight drop-shadow-lg">Justiça e Compromisso <br> com o seu Direito</h1>
-                <p class="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto">Atuação estratégica em causas complexas, pautada pela ética e excelência jurídica.</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-6 leading-tight drop-shadow-lg uppercase tracking-tight">Justiça e Compromisso <br> com o seu Direito</h1>
+                <p class="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto mb-10">Atuação estratégica em causas complexas, pautada pela ética e excelência jurídica.</p>
             </div>
         </section>
 
         <!-- SOBRE -->
-        <section id="sobre" class="py-20 bg-white">
+        <section id="sobre" class="py-24 bg-white">
             <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex flex-col md:flex-row items-center gap-16">
                     <div class="w-full md:w-1/2 relative">
-                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-law-gold z-0 hidden md:block rounded-sm"></div>
-                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ricardo Bitencourt" class="relative z-10 shadow-2xl w-full h-auto object-cover rounded-sm">
+                        <div class="absolute -top-6 -left-6 w-full h-full border-2 border-law-gold/30 z-0 hidden md:block rounded-sm"></div>
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ricardo Bitencourt" class="relative z-10 shadow-2xl w-full h-auto object-cover rounded-sm border-8 border-white">
                     </div>
                     <div class="w-full md:w-1/2">
-                        <h4 class="text-law-gold text-sm font-bold uppercase tracking-widest mb-2">Sobre o Advogado</h4>
-                        <h2 class="text-3xl md:text-4xl font-bold text-law-blue mb-6">Ricardo Bitencourt</h2>
-                        <p class="text-gray-600 mb-6 leading-relaxed text-justify">Com sólida formação e anos de experiência nos tribunais, Ricardo Bitencourt fundou seu escritório com o propósito de oferecer uma advocacia artesanal e estratégica.</p>
-                        <p class="text-gray-600 mb-8 leading-relaxed text-justify">Buscamos não apenas resolver conflitos, mas garantir a segurança jurídica necessária para nossos clientes em todas as esferas do direito.</p>
-                        <div class="grid grid-cols-2 gap-4 border-t pt-6">
-                            <div><strong class="block text-3xl text-law-gold font-serif">15+</strong><span class="text-xs uppercase text-gray-500 tracking-wider">Anos de Experiência</span></div>
-                            <div><strong class="block text-3xl text-law-gold font-serif">500+</strong><span class="text-xs uppercase text-gray-500 tracking-wider">Casos de Sucesso</span></div>
+                        <h4 class="text-law-gold text-sm font-bold uppercase tracking-widest mb-3">Compromisso & Ética</h4>
+                        <h2 class="text-4xl md:text-5xl font-bold text-law-blue mb-8 font-serif">Nossa Missão é Garantir a sua Segurança Jurídica</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed text-lg text-justify font-light">Com sólida formação e anos de experiência nos tribunais, o escritório foi fundado com o propósito de oferecer uma advocacia artesanal e estratégica.</p>
+                        <p class="text-gray-600 mb-10 leading-relaxed text-lg text-justify font-light">Buscamos não apenas resolver conflitos, mas prevenir riscos, garantindo a paz de espírito necessária para que nossos clientes foquem no que realmente importa.</p>
+                        <div class="grid grid-cols-2 gap-8 border-t border-gray-100 pt-10">
+                            <div><strong class="block text-4xl text-law-gold font-serif mb-1">15+</strong><span class="text-[10px] uppercase text-gray-500 font-bold tracking-widest">Anos de Experiência</span></div>
+                            <div><strong class="block text-4xl text-law-gold font-serif mb-1">98%</strong><span class="text-[10px] uppercase text-gray-500 font-bold tracking-widest">Índice de Satisfação</span></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÉTODO -->
+        <section class="py-24 bg-law-blue text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h4 class="text-law-gold text-sm font-bold uppercase tracking-widest mb-3">Nosso Método</h4>
+                <h2 class="text-3xl md:text-4xl font-bold mb-16 font-serif">A Jornada do seu Caso</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+                    <div class="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-white/10 z-0"></div>
+                    <div class="relative z-10 group">
+                        <div class="w-20 h-20 bg-law-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="phone-call" width="30" height="30"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">1. Contato</h3>
+                        <p class="text-gray-400 text-sm">Agendamento rápido via canais oficiais.</p>
+                    </div>
+                    <div class="relative z-10 group">
+                        <div class="w-20 h-20 bg-law-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="search" width="30" height="30"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">2. Análise</h3>
+                        <p class="text-gray-400 text-sm">Estudo detalhado de toda a documentação.</p>
+                    </div>
+                    <div class="relative z-10 group">
+                        <div class="w-20 h-20 bg-law-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="gavel" width="30" height="30"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">3. Estratégia</h3>
+                        <p class="text-gray-400 text-sm">Definição da melhor tese jurídica.</p>
+                    </div>
+                    <div class="relative z-10 group">
+                        <div class="w-20 h-20 bg-law-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl group-hover:scale-110 transition-transform">
+                            <i data-lucide="shield-check" width="30" height="30"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">4. Resultado</h3>
+                        <p class="text-gray-400 text-sm">Foco total na resolução e segurança.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ATUAÇÃO -->
-        <section id="atuacao" class="py-20 bg-law-gray">
+        <section id="atuacao" class="py-24 bg-law-gray">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-law-blue mb-4">Áreas de Atuação</h2>
-                <div class="w-16 h-1 bg-law-gold mx-auto mb-12"></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-law-gold group">
-                        <div class="text-law-gold mb-4"><i data-lucide="scale" width="40" height="40"></i></div>
-                        <h3 class="text-xl font-bold text-law-blue mb-2">Direito Civil</h3>
-                        <p class="text-gray-500 text-sm">Contratos, indenizações e responsabilidade civil em geral.</p>
+                <h4 class="text-law-gold text-sm font-bold uppercase tracking-widest mb-3">Especialidades</h4>
+                <h2 class="text-3xl md:text-4xl font-bold text-law-blue mb-4 font-serif">Áreas de Atuação Estratégica</h2>
+                <div class="w-16 h-1 bg-law-gold mx-auto mb-16"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
+                    <div class="bg-white p-10 shadow-sm hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-law-gold group rounded-sm">
+                        <div class="text-law-gold mb-6 inline-block"><i data-lucide="scale" width="48" height="48"></i></div>
+                        <h3 class="text-2xl font-bold text-law-blue mb-4 font-serif">Direito Civil</h3>
+                        <p class="text-gray-500 leading-relaxed mb-6">Proteção de bens, elaboração de contratos complexos, indenizações e responsabilidade civil em todas as instâncias.</p>
+                        <a href="https://wa.me/5551992496479" class="text-law-gold font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">Saiba Mais <i data-lucide="arrow-right" width="14"></i></a>
                     </div>
-                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-law-gold group">
-                        <div class="text-law-gold mb-4"><i data-lucide="users" width="40" height="40"></i></div>
-                        <h3 class="text-xl font-bold text-law-blue mb-2">Direito de Família</h3>
-                        <p class="text-gray-500 text-sm">Divórcios, inventários, partilha de bens e pensão alimentícia.</p>
+                    <div class="bg-white p-10 shadow-sm hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-law-gold group rounded-sm">
+                        <div class="text-law-gold mb-6 inline-block"><i data-lucide="users" width="48" height="48"></i></div>
+                        <h3 class="text-2xl font-bold text-law-blue mb-4 font-serif">Direito de Família</h3>
+                        <p class="text-gray-500 leading-relaxed mb-6">Mediação de divórcios, inventários, planejamento sucessório, partilha de bens e proteção de menores com sigilo total.</p>
+                        <a href="https://wa.me/5551992496479" class="text-law-gold font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">Saiba Mais <i data-lucide="arrow-right" width="14"></i></a>
                     </div>
-                    <div class="bg-white p-8 shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-law-gold group">
-                        <div class="text-law-gold mb-4"><i data-lucide="briefcase" width="40" height="40"></i></div>
-                        <h3 class="text-xl font-bold text-law-blue mb-2">Direito Trabalhista</h3>
-                        <p class="text-gray-500 text-sm">Defesa dos direitos do trabalhador e consultoria preventiva.</p>
+                    <div class="bg-white p-10 shadow-sm hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-law-gold group rounded-sm">
+                        <div class="text-law-gold mb-6 inline-block"><i data-lucide="briefcase" width="48" height="48"></i></div>
+                        <h3 class="text-2xl font-bold text-law-blue mb-4 font-serif">Direito Trabalhista</h3>
+                        <p class="text-gray-500 leading-relaxed mb-6">Defesa técnica para empregados e consultoria preventiva para empresas, visando a redução de riscos e passivos.</p>
+                        <a href="https://wa.me/5551992496479" class="text-law-gold font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">Saiba Mais <i data-lucide="arrow-right" width="14"></i></a>
                     </div>
+                    <div class="bg-white p-10 shadow-sm hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-law-gold group rounded-sm">
+                        <div class="text-law-gold mb-6 inline-block"><i data-lucide="shopping-bag" width="48" height="48"></i></div>
+                        <h3 class="text-2xl font-bold text-law-blue mb-4 font-serif">Direito do Consumidor</h3>
+                        <p class="text-gray-500 leading-relaxed mb-6">Ações contra práticas abusivas, negativação indevida e problemas com planos de saúde.</p>
+                        <a href="https://wa.me/5551992496479" class="text-law-gold font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">Saiba Mais <i data-lucide="arrow-right" width="14"></i></a>
+                    </div>
+                    <div class="bg-white p-10 shadow-sm hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-law-gold group rounded-sm">
+                        <div class="text-law-gold mb-6 inline-block"><i data-lucide="umbrella" width="48" height="48"></i></div>
+                        <h3 class="text-2xl font-bold text-law-blue mb-4 font-serif">Direito Previdenciário</h3>
+                        <p class="text-gray-500 leading-relaxed mb-6">Planejamento previdenciário, aposentadorias e revisões de benefícios.</p>
+                        <a href="https://wa.me/5551992496479" class="text-law-gold font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">Saiba Mais <i data-lucide="arrow-right" width="14"></i></a>
+                    </div>
+                    <div class="bg-white p-10 shadow-sm hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-law-gold group rounded-sm">
+                        <div class="text-law-gold mb-6 inline-block"><i data-lucide="file-check" width="48" height="48"></i></div>
+                        <h3 class="text-2xl font-bold text-law-blue mb-4 font-serif">Consultoria Jurídica</h3>
+                        <p class="text-gray-500 leading-relaxed mb-6">Assessoria preventiva para evitar litígios e elaboração de pareceres técnicos.</p>
+                        <a href="https://wa.me/5551992496479" class="text-law-gold font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">Saiba Mais <i data-lucide="arrow-right" width="14"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h4 class="text-law-gold text-sm font-bold uppercase tracking-widest mb-3 text-center">Tire suas dúvidas</h4>
+                <h2 class="text-3xl md:text-4xl font-bold text-law-blue mb-12 text-center font-serif">Perguntas Frequentes</h2>
+                <div class="space-y-4">
+                    <details class="faq-accordion bg-law-gray p-6 rounded-xl cursor-pointer group transition-all" open>
+                        <summary class="flex justify-between items-center font-bold text-law-blue list-none">
+                            Como funciona a primeira consulta jurídica?
+                            <i data-lucide="chevron-down" class="text-law-gold transition-transform duration-300"></i>
+                        </summary>
+                        <div class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                            Nossa primeira consulta visa entender os fatos, analisar a viabilidade do caso e traçar as primeiras estratégias jurídicas. Pode ser realizada presencialmente ou por videoconferência.
+                        </div>
+                    </details>
+                    <details class="faq-accordion bg-law-gray p-6 rounded-xl cursor-pointer group transition-all">
+                        <summary class="flex justify-between items-center font-bold text-law-blue list-none">
+                            Quais documentos preciso para iniciar um processo?
+                            <i data-lucide="chevron-down" class="text-law-gold transition-transform duration-300"></i>
+                        </summary>
+                        <div class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                            Isso varia conforme o caso, mas geralmente RG, CPF, comprovante de residência e todos os documentos relacionados ao conflito (contratos, conversas de WhatsApp, e-mails, etc.).
+                        </div>
+                    </details>
+                    <details class="faq-accordion bg-law-gray p-6 rounded-xl cursor-pointer group transition-all">
+                        <summary class="flex justify-between items-center font-bold text-law-blue list-none">
+                            Atendem em outras cidades ou estados?
+                            <i data-lucide="chevron-down" class="text-law-gold transition-transform duration-300"></i>
+                        </summary>
+                        <div class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                            Sim. Com o processo eletrônico, podemos atuar em qualquer tribunal do Brasil de forma eficiente e segura.
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
 
         <!-- DEPOIMENTOS -->
-        <section class="py-20 bg-law-blue text-white overflow-hidden relative">
-            <div class="container mx-auto px-4 relative z-10">
-                <h2 class="text-3xl font-bold text-center mb-12">O que dizem nossos clientes</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white/5 p-8 rounded-lg border border-white/10 text-center md:text-left">
-                        <p class="italic text-gray-300 text-sm mb-6">"Profissional exemplar. Conduziu meu caso com extrema clareza e dedicação. Consegui o resultado que esperava."</p>
-                        <h5 class="font-bold text-law-gold font-serif">Ana Maria S.</h5>
-                    </div>
-                    <div class="bg-white/5 p-8 rounded-lg border border-white/10 text-center md:text-left">
-                        <p class="italic text-gray-300 text-sm mb-6">"Excelente atendimento e resultado rápido. Recomendo o Dr. Ricardo para quem busca seriedade."</p>
-                        <h5 class="font-bold text-law-gold font-serif">Marcos P.</h5>
-                    </div>
-                    <div class="bg-white/5 p-8 rounded-lg border border-white/10 text-center md:text-left">
-                        <p class="italic text-gray-300 text-sm mb-6">"Conhecimento técnico impecável. Me senti segura durante todo o processo jurídico. Nota 10!"</p>
-                        <h5 class="font-bold text-law-gold font-serif">Lúcia F.</h5>
+        <section class="py-24 bg-law-gray">
+            <div class="container mx-auto px-4">
+                <div class="bg-law-blue rounded-3xl p-10 md:p-20 text-white relative overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 right-0 p-10 opacity-10"><i data-lucide="quote" width="120" height="120"></i></div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 font-serif relative z-10">O que dizem nossos clientes</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+                        <div class="space-y-6">
+                            <div class="flex text-law-gold"><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i></div>
+                            <p class="italic text-gray-300 leading-relaxed">"Profissional exemplar. Conduziu meu caso com extrema clareza e dedicação. Consegui o resultado que esperava."</p>
+                            <h5 class="font-bold text-law-gold text-lg font-serif">— Ana Maria S.</h5>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex text-law-gold"><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i></div>
+                            <p class="italic text-gray-300 leading-relaxed">"Excelente atendimento e resultado rápido. Recomendo o Dr. Ricardo para quem busca seriedade e confiança."</p>
+                            <h5 class="font-bold text-law-gold text-lg font-serif">— Marcos P.</h5>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex text-law-gold"><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i><i data-lucide="star" fill="currentColor"></i></div>
+                            <p class="italic text-gray-300 leading-relaxed">"Conhecimento técnico impecável. Me senti segura durante todo o processo jurídico. Nota 10!"</p>
+                            <h5 class="font-bold text-law-gold text-lg font-serif">— Lúcia F.</h5>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- LOCALIZAÇÃO & CONTATO (PADRÃO FCL - 100% PADRONIZADO) -->
-        <section class="py-20 bg-stone-900 text-white">
+        <!-- CONTATO & LOCALIZAÇÃO (FCL) -->
+        <section id="contato" class="py-24 bg-stone-900 text-white">
             <div class="container mx-auto px-4">
-                <div class="mb-12 w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a href="tel:+555133727235" class="bg-stone-800 p-6 rounded-lg border border-stone-700 hover:border-law-gold transition-all block hover:bg-stone-700/50 group text-center">
-                        <i data-lucide="phone" class="mx-auto text-law-gold mb-3 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-1 text-center">Telefone</h3>
-                        <p class="text-xl font-bold">(51) 3372-7235</p>
+                <div class="mb-16 w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <a href="tel:+555133727235" class="bg-stone-800 p-8 rounded-2xl border border-stone-700 hover:border-law-gold transition-all block text-center shadow-lg group">
+                        <div class="bg-law-gold/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-law-gold transition-colors">
+                            <i data-lucide="phone" class="text-law-gold group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-2 font-bold">Telefone</h3>
+                        <p class="text-2xl font-bold">(51) 3372-7235</p>
                     </a>
-                    <a href="mailto:contato@bitencourt.adv.br" class="bg-stone-800 p-6 rounded-lg border border-stone-700 hover:border-law-gold transition-all block hover:bg-stone-700/50 group text-center">
-                        <i data-lucide="mail" class="mx-auto text-law-gold mb-3 group-hover:scale-110 transition-transform"></i>
-                        <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-1 text-center">Email</h3>
-                        <p class="text-xl font-bold break-all">contato@bitencourt.adv.br</p>
+                    <a href="mailto:contato@bitencourt.adv.br" class="bg-stone-800 p-8 rounded-2xl border border-stone-700 hover:border-law-gold transition-all block text-center shadow-lg group">
+                        <div class="bg-law-gold/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-law-gold transition-colors">
+                            <i data-lucide="mail" class="text-law-gold group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-stone-400 text-xs uppercase tracking-[0.2em] mb-2 font-bold">Email</h3>
+                        <p class="text-2xl font-bold break-all">contato@bitencourt.adv.br</p>
                     </a>
                 </div>
 
-                <!-- Card de Localização FCL Premium (Dimensões: max-w-4xl, p-10) -->
                 <div class="max-w-4xl mx-auto bg-stone-800 rounded-2xl overflow-hidden shadow-2xl border border-stone-700">
-                    <div class="bg-law-blue py-5 text-center border-b border-white/5 shadow-md">
+                    <div class="bg-law-blue py-6 text-center border-b border-white/5 shadow-md">
                         <h2 class="text-xl md:text-2xl font-serif font-bold text-law-gold uppercase tracking-widest flex items-center justify-center gap-3">
                             <i data-lucide="map-pin" class="text-law-gold shrink-0"></i>
                             Onde Estamos
                         </h2>
                     </div>
-                    <div class="p-6 md:p-10 flex flex-col gap-8">
-                        <div class="text-center space-y-2">
+                    <div class="p-6 md:p-12 flex flex-col gap-10">
+                        <div class="text-center space-y-3">
                             <p class="text-stone-400 text-sm md:text-base font-light italic">"Localização privilegiada no centro de Porto Alegre"</p>
-                            <p class="text-stone-100 font-bold text-lg md:text-2xl leading-tight">Rua Senhor dos Passos, 372 - Sala 701</p>
-                            <p class="text-stone-400 text-sm uppercase tracking-wider">Centro Histórico - Porto Alegre/RS</p>
+                            <p class="text-stone-100 font-bold text-2xl md:text-3xl leading-tight">Rua Senhor dos Passos, 372 - Sala 701</p>
+                            <p class="text-stone-400 text-sm uppercase tracking-[0.3em] font-bold">Centro Histórico - Porto Alegre/RS</p>
                         </div>
                         
-                        <!-- Mapa Colorido (Altura: h-64 a h-96) -->
-                        <div class="w-full h-64 md:h-96 bg-stone-700 rounded-xl overflow-hidden border border-stone-600 shadow-inner">
+                        <!-- Mapa Retangular (Altura reduzida conforme solicitado) -->
+                        <div class="w-full h-56 md:h-80 bg-stone-700 rounded-2xl overflow-hidden border border-stone-600 shadow-inner">
                              <iframe 
                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.089856557876!2d-51.22359292446731!3d-30.033926874938837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197906353d7e35%3A0xe9c8e8d8f99e8293!2sR.%20Sr.%20dos%20Passos%2C%20372%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090020-180!5e0!3m2!1spt-BR!2sbr!4v1709230000000!5m2!1spt-BR!2sbr"
                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
@@ -194,10 +303,9 @@
                              </iframe>
                         </div>
                         
-                        <!-- Botão Arredondado centralizado -->
-                        <div class="flex justify-center">
+                        <div class="flex justify-center pb-4">
                             <a href="https://maps.app.goo.gl/Bukf7foyGgraTWnU9" target="_blank" rel="noopener noreferrer"
-                               class="inline-flex items-center gap-3 bg-law-gold hover:bg-white hover:text-law-blue text-white font-bold py-4 px-10 rounded-full shadow-lg transition-all hover:scale-105 uppercase tracking-widest text-sm group">
+                               class="inline-flex items-center gap-4 bg-law-gold hover:bg-white hover:text-law-blue text-white font-bold py-5 px-12 rounded-full shadow-lg transition-all hover:scale-105 uppercase tracking-widest text-sm group">
                                 <i data-lucide="navigation" class="group-hover:animate-bounce"></i>
                                 Traçar Rota / Como Chegar
                             </a>
@@ -208,21 +316,21 @@
         </section>
     </main>
 
-    <!-- LEGAL BAR FCL (Sub-Footer - Altura py-8) -->
-    <div class="bg-stone-950 border-t border-stone-900 py-8 text-[11px] md:text-xs text-stone-500">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+    <!-- LEGAL BAR FCL (Fino e Discreto) -->
+    <div class="bg-stone-950 border-t border-stone-900 py-6 text-[11px] md:text-xs text-stone-500">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="text-center md:text-left leading-relaxed">
-                &copy; <span id="year"></span> Ricardo Bitencourt Advocacia. <br class="md:hidden"> OAB/RS 00.000. Todos os direitos reservados.
+                &copy; <span id="year"></span> Ricardo Bitencourt Advocacia. OAB/RS 00.000.
             </div>
             <div class="flex gap-6 font-bold uppercase tracking-widest">
                  <button onclick="toggleModal('modal-terms')" class="hover:text-law-gold transition-colors">Termos de Uso</button>
                  <span class="text-stone-800">|</span>
-                 <button onclick="toggleModal('modal-privacy')" class="hover:text-law-gold transition-colors">Privacidade</button>
+                 <button onclick="toggleModal('modal-privacy')" class="hover:text-law-gold transition-colors">Política de Privacidade</button>
             </div>
         </div>
     </div>
 
-    <!-- CREDITS BAR FCL (Rodapé Final - Altura py-4, Fundo #000) -->
+    <!-- CREDITS BAR FCL (Preto Absoluto) -->
     <footer class="bg-black text-white py-4 border-t border-stone-800/50">
         <div class="container mx-auto px-4 flex items-center justify-center gap-3">
             <span class="text-stone-500 font-bold text-[10px] uppercase tracking-widest">Criado por <span class="text-stone-300">FCL</span></span>
@@ -232,7 +340,7 @@
                class="flex items-center gap-1.5 group transition-all">
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDjkkz_vlntJDY40iwAVZC60A5F5b6IwN5GpInCRMUiOo-kZ6ANNWSX1GG6sN7bYDKQmiD7P6n2fWaMBMlnSOOYLd3vItbVV4MJYff8ly1_P9mhagS_vdRYHBh5mrwYQdOrn0Yb5866Dz3uzghrVw3dOuk00FdKJHjBXVUaNLQoW7hJmy79HNkh6DVqmc/s1600/whatsapp1.png" 
                      alt="WhatsApp" width="16" height="16" class="w-4 h-4">
-                <span class="text-[10px] font-bold text-stone-500 group-hover:text-whatsapp-green uppercase tracking-widest">Contato</span>
+                <span class="text-[10px] font-bold text-stone-500 group-hover:text-whatsapp-green uppercase tracking-widest transition-colors">Contato</span>
             </a>
         </div>
     </footer>
@@ -308,7 +416,11 @@
 
         window.addEventListener('scroll', () => {
             const h = document.getElementById('main-header');
-            window.scrollY > 50 ? h.classList.add('py-2', 'shadow-xl') : h.classList.remove('py-2', 'shadow-xl');
+            if(window.scrollY > 50) {
+                h.classList.add('py-2', 'shadow-xl');
+            } else {
+                h.classList.remove('py-2', 'shadow-xl');
+            }
         });
     </script>
 </body>

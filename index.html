@@ -61,7 +61,7 @@
         .faq-accordion[open] summary i { transform: rotate(180deg); }
         summary::-webkit-details-marker { display: none; }
     </style>
-</head>
+ head>
 <body class="bg-law-gray text-slate-800 antialiased selection:bg-law-gold selection:text-white flex flex-col min-h-screen overflow-x-hidden">
 
     <!-- HEADER -->
@@ -92,9 +92,25 @@
         <section id="sobre" class="py-24 bg-white">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center gap-16">
-                    <div class="w-full md:w-1/2 relative">
-                        <div class="absolute -top-6 -left-6 w-full h-full border-2 border-law-gold/30 z-0 hidden md:block rounded-sm"></div>
-                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ricardo Bitencourt" class="relative z-10 shadow-2xl w-full h-auto object-cover rounded-sm border-8 border-white">
+                    <div class="w-full md:w-1/2 flex justify-center">
+                        <!-- Container da foto ajustado: Foto maior e moldura mais justa -->
+                        <div class="relative p-3 md:p-4 w-full max-w-md">
+                            <!-- Moldura Dourada Principal (Externa) - Agora mais próxima da foto -->
+                            <div class="absolute inset-0 border-2 border-law-gold/40 rounded-sm"></div>
+                            
+                            <!-- Foto com moldura branca mínima (Pass-partout) -->
+                            <div class="relative z-10 bg-white p-1 shadow-2xl">
+                                <div class="aspect-[4/5] overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                         alt="Ricardo Bitencourt" 
+                                         class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
+                                </div>
+                            </div>
+                            
+                            <!-- Detalhes nos cantos levemente maiores para destaque -->
+                            <div class="absolute top-[-4px] left-[-4px] w-10 h-10 border-t-2 border-l-2 border-law-gold z-20"></div>
+                            <div class="absolute bottom-[-4px] right-[-4px] w-10 h-10 border-b-2 border-r-2 border-law-gold z-20"></div>
+                        </div>
                     </div>
                     <div class="w-full md:w-1/2">
                         <h4 class="text-law-gold text-sm font-bold uppercase tracking-widest mb-3">Compromisso & Ética</h4>
